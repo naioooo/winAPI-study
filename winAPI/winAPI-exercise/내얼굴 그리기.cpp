@@ -105,6 +105,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         DrawEllipseCenter(hdc, cen.x + 80, cen.y - 80, 40, 20);
         SelectObject(hdc, hOldBrush);
 
+        //ÄÚ
+        hBrush = CreateSolidBrush(COLOR_BODY);
+        hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
+        DrawtriangleCenter(hdc, cen.x, cen.y, 30, 70);
+        SelectObject(hdc, hOldBrush);
+
+        //ÄÚ
+        hBrush = CreateSolidBrush(COLOR_RED);
+        hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
+        DrawtriangleCenter(hdc, cen.x, cen.y, 30, 70);
+        SelectObject(hdc, hOldBrush);
+
         DeleteObject(hBrush);
         EndPaint(hwnd, &ps);
 

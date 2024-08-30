@@ -43,3 +43,13 @@ inline void DrawEllipsele(HDC hdc, int x, int y, int width, int height)
 {
 	Ellipse(hdc, x, y, x + width, y + height);
 }
+
+inline void DrawtriangleCenter(HDC hdc, int x, int y, int width, int height)
+{
+	vector<POINT> points;
+	points.push_back({x, y - (height / 2)});
+	points.push_back({x + (width / 2), y + (height / 2)});
+	points.push_back({x - (width / 2), y + (height / 2)});
+
+	Polygon(hdc, points.data(), 3);
+}
