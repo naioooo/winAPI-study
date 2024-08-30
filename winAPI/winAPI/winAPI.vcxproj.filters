@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="API Framework">
+      <UniqueIdentifier>{24c579ec-00bd-4b07-bc8f-392e147ec2b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\PCH">
+      <UniqueIdentifier>{1d14a542-e29a-4bca-8c9f-3c8fce358003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\Utility">
+      <UniqueIdentifier>{474c1722-436f-4e3b-a752-ea495e26a59e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\Utility\Math">
+      <UniqueIdentifier>{63db9fd2-1352-490a-ba71-fb626d139412}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="240828_winapi.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="240829_winapi.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="240830_winapi.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="최종버전.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C3DMatrix.cpp">
+      <Filter>API Framework\Utility\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C3DVector.cpp">
+      <Filter>API Framework\Utility\Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C3DMatrix.h">
+      <Filter>API Framework\Utility\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C3DVector.h">
+      <Filter>API Framework\Utility\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonMacroFunction.h">
+      <Filter>API Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomFunction.h">
+      <Filter>API Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>API Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>API Framework\PCH</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
