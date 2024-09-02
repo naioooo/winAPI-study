@@ -19,8 +19,8 @@ void MainGame::release(void)
 
 void MainGame::update(void)
 {
-	GameNode::update();
 	input();
+	GameNode::update();
 }
 
 void MainGame::render(HDC hdc)

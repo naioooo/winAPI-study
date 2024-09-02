@@ -86,6 +86,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         hdc = BeginPaint(hwnd, &ps);
         hBrush = CreateSolidBrush(COLOR_BODY);
 
+        // 个烹
+
         // 倔奔
         hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
         DrawEllipseCenter(hdc, cen.x, cen.y, 400, 450);
@@ -105,17 +107,27 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         DrawEllipseCenter(hdc, cen.x + 80, cen.y - 80, 40, 20);
         SelectObject(hdc, hOldBrush);
 
-        //内
+        // 内
         hBrush = CreateSolidBrush(COLOR_BODY);
         hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
         DrawtriangleCenter(hdc, cen.x, cen.y, 30, 70);
         SelectObject(hdc, hOldBrush);
 
-        //内
+        // 涝
         hBrush = CreateSolidBrush(COLOR_RED);
         hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
         DrawtriangleCenter(hdc, cen.x, cen.y, 30, 70);
         SelectObject(hdc, hOldBrush);
+
+        // 蓖
+
+        // 传界
+
+        // 赣府
+
+        // 
+
+        
 
         DeleteObject(hBrush);
         EndPaint(hwnd, &ps);
