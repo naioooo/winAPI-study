@@ -14,6 +14,7 @@
 //memcpy() / memset()
 #include <stdio.h>
 #include <tchar.h>
+#include <assert.h>
 
 // C++ 런타임 헤더 파일입니다.
 #include <iostream>
@@ -28,6 +29,14 @@
 // 중복데이터를 허용하지 않기 때문이다
 // 유사데이터가 많다면 해시 충돌 발생 여부가 항상 존재한다
 #include <unordered_map>
+#include <bitset>
+#include <cassert>
+
+using namespace std;
+//using std::vector;
+//using std::string;
+//using std::wstring;
+
 //
 //#include <D2D1.h>
 //#include <d2d1helper.h>
@@ -49,14 +58,16 @@
 //내가 만든 헤더 너를위해
 #include "CommonMacroFunction.h"
 #include "RandomFunction.h"
+#include "KeyManager.h"
 
 //디자인 패턴
 #define RND RandomFunction::getSingleton()
+#define KEYMANAGER KeyManager::getSingleton()
 
 // 매크로
 #define WINNAME     (LPSTR)(TEXT("WindowAPI"))
-#define WINSTART_X   400
-#define WINSTART_Y   400
+#define WINSTART_X   100
+#define WINSTART_Y   100
 #define WINSIZE_X    800
 #define WINSIZE_Y    800
 #define WINSTYLE     WS_CAPTION | WS_SYSMENU

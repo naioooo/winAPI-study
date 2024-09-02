@@ -17,6 +17,15 @@
     <Filter Include="API Framework\Utility\Math">
       <UniqueIdentifier>{63db9fd2-1352-490a-ba71-fb626d139412}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\CoreClass">
+      <UniqueIdentifier>{2c61fcb4-f3db-4f1a-aba2-d99d785c8d3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainClass">
+      <UniqueIdentifier>{07cd8920-a02e-4382-bb90-62e5dfe44bc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\Utility\ManagerClass">
+      <UniqueIdentifier>{0671ef75-b564-4ab8-b16c-23153c5091df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="240828_winapi.cpp">
@@ -40,6 +49,15 @@
     <ClCompile Include="C3DVector.cpp">
       <Filter>API Framework\Utility\Math</Filter>
     </ClCompile>
+    <ClCompile Include="GameNode.cpp">
+      <Filter>API Framework\CoreClass</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>MainClass</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>API Framework\Utility\ManagerClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h">
@@ -51,14 +69,23 @@
     <ClInclude Include="CommonMacroFunction.h">
       <Filter>API Framework\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="RandomFunction.h">
-      <Filter>API Framework\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="SingletonBase.h">
-      <Filter>API Framework\Utility</Filter>
-    </ClInclude>
     <ClInclude Include="Stdafx.h">
       <Filter>API Framework\PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNode.h">
+      <Filter>API Framework\CoreClass</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>MainClass</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>API Framework\Utility\ManagerClass</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomFunction.h">
+      <Filter>API Framework\Utility\ManagerClass</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>API Framework\Utility\ManagerClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
