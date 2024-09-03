@@ -35,6 +35,9 @@
     <Filter Include="API Framework\Clay-pigeon shooting">
       <UniqueIdentifier>{6535cd98-43bb-452b-8146-fef3916073c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\Clay-pigeon shooting\Object">
+      <UniqueIdentifier>{d5cf4668-a648-40a0-9083-49d90fc598fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp">
@@ -97,6 +100,18 @@
     <ClCompile Include="ClayPigeonShooting.cpp">
       <Filter>API Framework\Clay-pigeon shooting</Filter>
     </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CPolygon.cpp">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CEllipse.cpp">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CRect.cpp">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h">
@@ -137,6 +152,18 @@
     </ClInclude>
     <ClInclude Include="ClayPigeonShooting.h">
       <Filter>API Framework\Clay-pigeon shooting</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CPolygon.h">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CEllipse.h">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CRect.h">
+      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

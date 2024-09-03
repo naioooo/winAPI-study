@@ -1,6 +1,7 @@
 #pragma once
 #include "Stdafx.h"
 #include "WhackAChikorita.h"
+#include "ClayPigeonShooting.h"
 
 // 전역 변수:
 
@@ -11,6 +12,7 @@ HINSTANCE _hInstance;
 HWND      _hWnd;
 POINT     _ptMouse;
 WhackAChikorita* _whackAChikorita;
+ClayPigeonShooting* _clayPigeonShooting;
 
 int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
@@ -18,6 +20,7 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _In_     int       nCmdShow)
 {
     _whackAChikorita = new WhackAChikorita();
+    _clayPigeonShooting = new ClayPigeonShooting();
 
     _hInstance = hInstance;
 
@@ -60,6 +63,10 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     {
         return 0;
     }
+    if (FAILED(_clayPigeonShooting->init()))
+    {
+        return 0;
+    }
 
     //setWindowSize(WINSTART_X, WINSTART_Y, WINSIZE_X, WINSIZE_Y);
 
@@ -74,13 +81,15 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     }
 
     _whackAChikorita->release();
+    _clayPigeonShooting->release();
     UnregisterClass(WINNAME, hInstance);
     return (int)message.wParam;
 }
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    return _whackAChikorita->MainProc(hwnd, message, wParam, lParam);
+    //return _whackAChikorita->MainProc(hwnd, message, wParam, lParam);
+    return _clayPigeonShooting->MainProc(hwnd, message, wParam, lParam);
 }
 
 void setWindowSize(int x, int y, int width, int height)

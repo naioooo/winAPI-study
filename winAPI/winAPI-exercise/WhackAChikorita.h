@@ -14,8 +14,6 @@ private:
 	vector<shared_ptr<Chikorita>> m_chikoritas;
 	shared_ptr<Cyndaquil> m_cyndaquil;
 
-
-
 	vector<POINT> m_genPoints;
 	int m_genTime;
 	int m_genCnt;
