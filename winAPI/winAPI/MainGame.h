@@ -5,7 +5,10 @@
 class MainGame : public GameNode
 {
 private:
-	RECT rc;
+	GImage* _bgImage;
+	GImage* _plImage;
+
+	RECT _rc;
 
 public:
 	HRESULT init(void);

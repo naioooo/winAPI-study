@@ -68,14 +68,14 @@ using namespace std;
 #define WINNAME     (LPSTR)(TEXT("WindowAPI"))
 #define WINSTART_X   100
 #define WINSTART_Y   100
-#define WINSIZE_X    800
+#define WINSIZE_X    1280
 #define WINSIZE_Y    800
 #define WINSTYLE     WS_CAPTION | WS_SYSMENU
 
 // 매크로 함수
-#define SAFE_DELETE(p)         {if(p) {delete (p); (p) = nullptr}}
-#define SAFE_DELETE_ARRAY(p)   {if(p) {delete[] (p); (p) = nullptr}}
-#define SAFE_RELEASE(p)        {if(p) {(p) -> release(); (p) = nullptr}}
+#define SAFE_DELETE(p)         {if(p) {delete (p); (p) = nullptr;}}
+#define SAFE_DELETE_ARRAY(p)   {if(p) {delete[] (p); (p) = nullptr;}}
+#define SAFE_RELEASE(p)        {if(p) {(p) -> release(); (p) = nullptr;}}
 
 // 전역변수 extern은 이놈이 전역에 있다고 명시해주는 것
 extern HINSTANCE _hInstance;

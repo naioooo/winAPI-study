@@ -26,6 +26,9 @@
     <Filter Include="API Framework\Utility\ManagerClass">
       <UniqueIdentifier>{0671ef75-b564-4ab8-b16c-23153c5091df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\IMAGE">
+      <UniqueIdentifier>{b7524951-0fcd-4b59-baa7-7e7d96d53878}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="240828_winapi.cpp">
@@ -58,6 +61,9 @@
     <ClCompile Include="KeyManager.cpp">
       <Filter>API Framework\Utility\ManagerClass</Filter>
     </ClCompile>
+    <ClCompile Include="GImage.cpp">
+      <Filter>API Framework\IMAGE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h">
@@ -86,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="SingletonBase.h">
       <Filter>API Framework\Utility\ManagerClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GImage.h">
+      <Filter>API Framework\IMAGE</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

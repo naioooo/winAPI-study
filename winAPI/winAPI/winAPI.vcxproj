@@ -144,6 +144,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GameNode.cpp" />
+    <ClCompile Include="GImage.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="WinMain.cpp">
@@ -163,6 +164,7 @@
     </ClInclude>
     <ClInclude Include="CommonMacroFunction.h" />
     <ClInclude Include="GameNode.h" />
+    <ClInclude Include="GImage.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="RandomFunction.h" />

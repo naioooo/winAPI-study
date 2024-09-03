@@ -1,6 +1,6 @@
 #pragma once
 #include "Stdafx.h"
-#include "MainGame.h"
+#include "WhackAChikorita.h"
 
 // 전역 변수:
 
@@ -10,14 +10,14 @@ void setWindowSize(int x, int y, int width, int height);
 HINSTANCE _hInstance;
 HWND      _hWnd;
 POINT     _ptMouse;
-MainGame* _mg;
+WhackAChikorita* _whackAChikorita;
 
 int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
-    _In_     LPSTR      ,
+    _In_     LPSTR,
     _In_     int       nCmdShow)
 {
-    _mg = new MainGame();
+    _whackAChikorita = new WhackAChikorita();
 
     _hInstance = hInstance;
 
@@ -56,7 +56,7 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
         return false;
     }
 
-    if (FAILED(_mg->init()))
+    if (FAILED(_whackAChikorita->init()))
     {
         return 0;
     }
@@ -73,14 +73,14 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
         DispatchMessage(&message);
     }
 
-    _mg->release();
+    _whackAChikorita->release();
     UnregisterClass(WINNAME, hInstance);
     return (int)message.wParam;
 }
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    return _mg->MainProc(hwnd, message, wParam, lParam);
+    return _whackAChikorita->MainProc(hwnd, message, wParam, lParam);
 }
 
 void setWindowSize(int x, int y, int width, int height)
@@ -97,4 +97,3 @@ void setWindowSize(int x, int y, int width, int height)
         (rc.bottom - rc.top),
         SWP_NOZORDER | SWP_NOMOVE);
 }
-

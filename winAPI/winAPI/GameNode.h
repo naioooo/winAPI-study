@@ -1,5 +1,6 @@
 #pragma once
 #include <Windows.h>
+#include "GImage.h"
 
 #pragma region 객체지향
 /*
@@ -53,6 +54,10 @@
 
 class GameNode
 {
+private:
+	GImage* _backBuffer;
+	void setBackBuffer();
+
 public:
 	//HRESULT : 함수가 성공적으로 실행됐는지 체크하는 반환형 (양수 : true, 음수 : false)
 	virtual HRESULT init(void);
@@ -60,6 +65,8 @@ public:
 	virtual void update(void);
 	virtual void render(HDC hdc);
 	virtual void input();
+
+	GImage* getBackBuffer() {return _backBuffer;};
 
 	// 메인 프로시저
 	// LRESULT 콜백 반환형

@@ -129,11 +129,18 @@
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp" />
     <ClCompile Include="C3DVector.cpp" />
+    <ClCompile Include="GameNode.cpp" />
+    <ClCompile Include="GImage.cpp" />
+    <ClCompile Include="Cyndaquil.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="Chikorita.cpp" />
+    <ClCompile Include="WhackAChikorita.cpp" />
+    <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="구구단출력.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="내얼굴 그리기.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="도형회전.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -164,6 +171,12 @@
     <ClInclude Include="C3DMatrix.h" />
     <ClInclude Include="C3DVector.h" />
     <ClInclude Include="CommonMacroFunction.h" />
+    <ClInclude Include="GameNode.h" />
+    <ClInclude Include="GImage.h" />
+    <ClInclude Include="Cyndaquil.h" />
+    <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="Chikorita.h" />
+    <ClInclude Include="WhackAChikorita.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="SingletonBase.h" />
     <ClInclude Include="Stdafx.h" />

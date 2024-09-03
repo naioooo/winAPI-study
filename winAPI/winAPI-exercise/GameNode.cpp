@@ -21,7 +21,7 @@ HRESULT GameNode::init(void)
     SetTimer(_hWnd, 1, 10, NULL);
 
     RND->init();
-    KEYMANAGER->init();   
+    KEYMANAGER->init();
     setBackBuffer();
 
     return S_OK;
@@ -50,6 +50,10 @@ void GameNode::input()
 {
 }
 
+void GameNode::mouseInput(UINT message, LPARAM lParam)
+{
+}
+
 LRESULT GameNode::MainProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     HDC hdc;
@@ -69,12 +73,12 @@ LRESULT GameNode::MainProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam
         EndPaint(hwnd, &ps);
     }
     break;
+    case WM_LBUTTONDOWN:
+    case WM_RBUTTONDOWN:
+    case WM_LBUTTONUP:
+    case WM_RBUTTONUP:
     case WM_MOUSEMOVE:
-        _ptMouse.x = LOWORD(lParam);
-        _ptMouse.y = HIWORD(lParam);
-        break;
-    case WM_KEYDOWN:
-    case WM_KEYUP:
+        mouseInput(message, lParam);
         break;
     case WM_DESTROY:
         PostQuitMessage(0);

@@ -17,6 +17,21 @@
     <Filter Include="API Framework\Utility\Math">
       <UniqueIdentifier>{5d9e2998-0a5c-4b08-be77-5c2bdce92a4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\exercise">
+      <UniqueIdentifier>{c9ec8369-249b-45a0-a372-550ea27dea1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\CoreClass">
+      <UniqueIdentifier>{efcd4b65-1946-41bd-9d90-8592b3618810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\Image">
+      <UniqueIdentifier>{67ae05e5-35d2-474e-9324-3605c594287f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\Whack-a-Chikorita">
+      <UniqueIdentifier>{5ca0b9a4-3cbd-42e0-b9ff-2b304d35d353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\Whack-a-Chikorita\Object">
+      <UniqueIdentifier>{1506c861-72c0-445d-9556-2d9d2793a7ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp">
@@ -26,34 +41,55 @@
       <Filter>API Framework\Utility\Math</Filter>
     </ClCompile>
     <ClCompile Include="구구단출력.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="내얼굴 그리기.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="도형회전.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="무작위 도형 출력.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="사각형 4단밀기.cpp">
-      <Filter>API Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="사각형 밀어내기.cpp">
-      <Filter>API Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="사각형에 영혼 넣기.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="애플로고출력.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="사각형에 영혼 넣기.cpp">
+      <Filter>API Framework\exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="사각형 밀어내기.cpp">
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="오망성출력.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
     </ClCompile>
     <ClCompile Include="이름출력.cpp">
-      <Filter>API Framework</Filter>
+      <Filter>API Framework\exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNode.cpp">
+      <Filter>API Framework\CoreClass</Filter>
+    </ClCompile>
+    <ClCompile Include="GImage.cpp">
+      <Filter>API Framework\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>API Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="WhackAChikorita.cpp">
+      <Filter>API Framework\Whack-a-Chikorita</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>API Framework\Whack-a-Chikorita</Filter>
+    </ClCompile>
+    <ClCompile Include="Chikorita.cpp">
+      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Cyndaquil.cpp">
+      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +110,24 @@
     </ClInclude>
     <ClInclude Include="Stdafx.h">
       <Filter>API Framework\PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNode.h">
+      <Filter>API Framework\CoreClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GImage.h">
+      <Filter>API Framework\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>API Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="WhackAChikorita.h">
+      <Filter>API Framework\Whack-a-Chikorita</Filter>
+    </ClInclude>
+    <ClInclude Include="Chikorita.h">
+      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Cyndaquil.h">
+      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

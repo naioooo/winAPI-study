@@ -21,6 +21,7 @@ POINT cen;
 vector<BodyPart> _bodyParts;
 vector<vector<POINT>> _polygons;
 
+string _background = "{x=2 y=788} {x=0 y=433} {x=795 y=441} {x=798 y=792} {x=794 y=800} {x=8 y=800}";
 string _face = "{x=207 y=237} {x=196 y=403} {x=202 y=445} {x=210 y=490} {x=225 y=521} {x=237 y=550} {x=251 y=580} {x=261 y=605} {x=273 y=618} {x=292 y=631} {x=301 y=635} {x=321 y=639} {x=339 y=640} {x=361 y=642} {x=384 y=643} {x=399 y=644} {x=435 y=643} {x=460 y=642} {x=477 y=638} {x=506 y=635} {x=516 y=632} {x=526 y=626} {x=541 y=612} {x=555 y=596} {x=567 y=578} {x=574 y=566} {x=579 y=553} {x=581 y=543} {x=587 y=524} {x=589 y=500} {x=590 y=469} {x=593 y=459} {x=597 y=447} {x=596 y=424} {x=595 y=404} {x=597 y=377} {x=599 y=341} {x=600 y=323} {x=600 y=296} {x=595 y=267} {x=591 y=256} {x=580 y=235} {x=577 y=231}";
 string _hair = "{ x = 189 y = 191 } {x = 161 y = 232} {x = 153 y = 274} {x = 145 y = 312} {x = 144 y = 348} {x = 150 y = 375} {x = 166 y = 392} {x = 212 y = 407} {x = 242 y = 407} {x = 294 y = 411} {x = 313 y = 412} {x = 335 y = 406} {x = 345 y = 382} {x = 345 y = 347} {x = 351 y = 327} {x = 361 y = 311} {x = 377 y = 294} {x = 397 y = 282} {x = 425 y = 276} {x = 445 y = 280} {x = 463 y = 296} {x = 476 y = 328} {x = 478 y = 340} {x = 478 y = 344} {x = 484 y = 365} {x = 490 y = 375} {x = 508 y = 384} {x = 547 y = 385} {x = 569 y = 382} {x = 596 y = 374} {x = 608 y = 366} {x = 617 y = 354} {x = 626 y = 331} {x = 628 y = 307} {x = 625 y = 284} {x = 615 y = 253} {x = 605 y = 222} {x = 600 y = 204} {x = 581 y = 169} {x = 552 y = 140} {x = 526 y = 124} {x = 494 y = 121} {x = 427 y = 120} {x = 387 y = 116} {x = 352 y = 114} {x = 312 y = 119} {x = 278 y = 132} {x = 246 y = 147} {x = 206 y = 163} {x = 196 y = 173}";; // ¸Ó¸®
 string _eye1 = "{x=286 y=431} {x=278 y=447} {x=279 y=450} {x=283 y=455} {x=292 y=456} {x=303 y=456} {x=314 y=456} {x=323 y=456} {x=336 y=456} {x=344 y=456} {x=349 y=451} {x=353 y=443} {x=353 y=434} {x=352 y=428} {x=351 y=426} {x=350 y=426} {x=349 y=425} {x=348 y=422} {x=335 y=422} {x=325 y=422} {x=316 y=422} {x=307 y=423} {x=294 y=427} {x=290 y=430}"; // ´«
@@ -139,6 +140,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         cen.x = WINSIZE_X / 2;
         cen.y = WINSIZE_Y / 2;
 
+        _bodyParts.push_back(parseCoordinates(_background, RGB(60, 60, 255)));
         _bodyParts.push_back(parseCoordinates(_body, COLOR_DARK_BLUE));
         _bodyParts.push_back(parseCoordinates(_neck, COLOR_BODY));
         _bodyParts.push_back(parseCoordinates(_ear1, COLOR_BODY));
