@@ -129,13 +129,22 @@
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp" />
     <ClCompile Include="C3DVector.cpp" />
+    <ClCompile Include="ClayPigeonShooting.cpp" />
     <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GImage.cpp" />
-    <ClCompile Include="Cyndaquil.cpp" />
+    <ClCompile Include="Cyndaquil.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="KeyManager.cpp" />
-    <ClCompile Include="Chikorita.cpp" />
-    <ClCompile Include="WhackAChikorita.cpp" />
-    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="Chikorita.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="WhackAChikorita.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="구구단출력.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -170,13 +179,20 @@
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h" />
     <ClInclude Include="C3DVector.h" />
+    <ClInclude Include="ClayPigeonShooting.h" />
     <ClInclude Include="CommonMacroFunction.h" />
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GImage.h" />
-    <ClInclude Include="Cyndaquil.h" />
+    <ClInclude Include="Cyndaquil.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="KeyManager.h" />
-    <ClInclude Include="Chikorita.h" />
-    <ClInclude Include="WhackAChikorita.h" />
+    <ClInclude Include="Chikorita.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="WhackAChikorita.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="SingletonBase.h" />
     <ClInclude Include="Stdafx.h" />

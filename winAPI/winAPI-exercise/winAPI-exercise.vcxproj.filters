@@ -32,6 +32,9 @@
     <Filter Include="API Framework\Whack-a-Chikorita\Object">
       <UniqueIdentifier>{1506c861-72c0-445d-9556-2d9d2793a7ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\Clay-pigeon shooting">
+      <UniqueIdentifier>{6535cd98-43bb-452b-8146-fef3916073c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp">
@@ -82,14 +85,17 @@
     <ClCompile Include="WhackAChikorita.cpp">
       <Filter>API Framework\Whack-a-Chikorita</Filter>
     </ClCompile>
-    <ClCompile Include="WinMain.cpp">
-      <Filter>API Framework\Whack-a-Chikorita</Filter>
-    </ClCompile>
     <ClCompile Include="Chikorita.cpp">
       <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
     </ClCompile>
     <ClCompile Include="Cyndaquil.cpp">
       <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>API Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="ClayPigeonShooting.cpp">
+      <Filter>API Framework\Clay-pigeon shooting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +134,9 @@
     </ClInclude>
     <ClInclude Include="Cyndaquil.h">
       <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ClayPigeonShooting.h">
+      <Filter>API Framework\Clay-pigeon shooting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
