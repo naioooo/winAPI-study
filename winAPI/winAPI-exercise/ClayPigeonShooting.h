@@ -12,8 +12,7 @@ private:
 	shared_ptr<GImage> m_bgImage;
 
 	vector<shared_ptr<Object>> m_objects;
-
-
+	
 	bool m_reGame;
 
 	int m_gameTime;

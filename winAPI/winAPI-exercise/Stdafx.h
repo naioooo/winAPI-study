@@ -25,6 +25,7 @@
 #include <random>
 #include <vector>
 #include <map>
+#include <queue>
 // 일반적인 상황에선 해시를 사용해 검색하기에 map보다 빠르다
 // 중복데이터를 허용하지 않기 때문이다
 // 유사데이터가 많다면 해시 충돌 발생 여부가 항상 존재한다

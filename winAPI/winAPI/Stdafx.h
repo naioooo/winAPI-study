@@ -68,7 +68,7 @@ using namespace std;
 #define WINNAME     (LPSTR)(TEXT("WindowAPI"))
 #define WINSTART_X   100
 #define WINSTART_Y   100
-#define WINSIZE_X    1280
+#define WINSIZE_X    800
 #define WINSIZE_Y    800
 #define WINSTYLE     WS_CAPTION | WS_SYSMENU
 

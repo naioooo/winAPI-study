@@ -17,14 +17,34 @@ void CEllipse::render(HDC hdc)
 {
     if (m_state != None)
     {
-        DrawEllipseCenter(hdc, m_center.x, m_center.y, m_radious, m_radious);
+        DrawEllipseCenter(hdc, m_center.x, m_center.y, m_radious * 2, m_radious * 2);
 
         switch (m_state)
         {
         case Idle:
+            GdiTransparentBlt
+            (
+                hdc,
+                m_center.x - m_radious, m_center.y - m_radious,
+                m_radious * 2, m_radious * 2,
+                m_image->getMemDC(),                      
+                0, 0,                        
+                40, 40,  
+                COLOR_MAGENTA                        
+            );
             break;
 
         case Die:
+            GdiTransparentBlt
+            (
+                hdc,
+                m_center.x - m_radious, m_center.y - m_radious,
+                m_radious * 2, m_radious * 2,
+                m_image->getMemDC(),
+                40, 0,
+                40, 40,
+                COLOR_MAGENTA
+            );
             break;
         }
     }
@@ -32,6 +52,9 @@ void CEllipse::render(HDC hdc)
 
 CEllipse::CEllipse()
 {
+    m_image = make_shared<GImage>();
+    m_image->init("Resource/Images/Object/zubat.bmp", 80, 40);
+
     m_type = TYPE::ELLIPSE;
     m_state = Idle;
     m_Cnt = 0;
@@ -52,7 +75,7 @@ CEllipse::CEllipse()
         m_center = { 800, 0 };
     }
 
-    m_radious = RND->getFromIntTo(50, 100);
+    m_radious = RND->getFromIntTo(20, 50);
 }
 
 CEllipse::~CEllipse()

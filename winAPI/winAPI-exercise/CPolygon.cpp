@@ -36,16 +36,36 @@ void CPolygon::render(HDC hdc)
         rect.top += getCenter().y;
         rect.bottom += getCenter().y;
 
-        DrawRect(hdc, rect);
+        //DrawRect(hdc, rect);
 
         Polygon(hdc, transformedPoints.data(), transformedPoints.size());
 
         switch (m_state)
         {
         case Idle:
+            GdiTransparentBlt
+            (
+                hdc,
+                rect.left, rect.top,
+                rect.right - rect.left, rect.bottom - rect.top,
+                m_image->getMemDC(),
+                0, 0,
+                56, 56,
+                COLOR_MAGENTA
+            );
             break;
 
         case Die:
+            GdiTransparentBlt
+            (
+                hdc,
+                rect.left, rect.top,
+                rect.right - rect.left, rect.bottom - rect.top,
+                m_image->getMemDC(),
+                56, 0,
+                56, 56,
+                COLOR_MAGENTA
+            );
             break;
         }
     }
@@ -70,6 +90,9 @@ void CPolygon::GenerateRandomPoints(int width, int height)
 
 CPolygon::CPolygon()
 {
+    m_image = make_shared<GImage>();
+    m_image->init("Resource/Images/Object/crobat.bmp", 112, 56);
+
     m_type = TYPE::POLYGON;
     m_state = Idle;
     m_Cnt = 0;

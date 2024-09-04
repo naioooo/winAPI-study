@@ -21,7 +21,6 @@ private:
 	shared_ptr<GImage> m_image;
 
 	int   m_Hp;
-
 	int  m_Cnt;
 
 public:

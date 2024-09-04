@@ -2,6 +2,12 @@
 #include "Stdafx.h"
 #include "WhackAChikorita.h"
 #include "ClayPigeonShooting.h"
+#include "SliceGame.h"
+#include "MakeMiniMap.h"
+#include "WhirlwindBullet.h"
+#include "BlackHole.h"
+#include "EarthwormGame.h"
+
 
 // 전역 변수:
 
@@ -11,9 +17,15 @@ void setWindowSize(int x, int y, int width, int height);
 HINSTANCE _hInstance;
 HWND      _hWnd;
 POINT     _ptMouse;
-WhackAChikorita* _whackAChikorita;
-ClayPigeonShooting* _clayPigeonShooting;
 
+WhackAChikorita*    _whackAChikorita;
+ClayPigeonShooting* _clayPigeonShooting;
+SliceGame*          _sliceGame;
+MakeMiniMap*        _makeMiniMap;
+WhirlwindBullet*    _whirlwindBullet;
+BlackHole*          _blackHole;
+EarthwormGame*      _earthwormGame;
+ 
 int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
     _In_     LPSTR,
@@ -21,6 +33,11 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
 {
     _whackAChikorita = new WhackAChikorita();
     _clayPigeonShooting = new ClayPigeonShooting();
+    _sliceGame = new SliceGame();
+    _makeMiniMap = new MakeMiniMap();
+    _whirlwindBullet = new WhirlwindBullet();
+    _blackHole = new BlackHole();
+    _earthwormGame = new EarthwormGame();
 
     _hInstance = hInstance;
 
@@ -67,6 +84,26 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     {
         return 0;
     }
+    if (FAILED(_sliceGame->init()))
+    {
+        return 0;
+    }
+    if (FAILED(_makeMiniMap->init()))
+    {
+        return 0;
+    }
+    if (FAILED(_whirlwindBullet->init()))
+    {
+        return 0;
+    }
+    if (FAILED(_blackHole->init()))
+    {
+        return 0;
+    }
+    if (FAILED(_earthwormGame->init()))
+    {
+        return 0;
+    }
 
     //setWindowSize(WINSTART_X, WINSTART_Y, WINSIZE_X, WINSIZE_Y);
 
@@ -82,6 +119,11 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
 
     _whackAChikorita->release();
     _clayPigeonShooting->release();
+    _sliceGame->release();
+    _makeMiniMap->release();
+    _whirlwindBullet->release();
+    _blackHole->release();
+    _earthwormGame->release();
     UnregisterClass(WINNAME, hInstance);
     return (int)message.wParam;
 }
@@ -89,7 +131,12 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     //return _whackAChikorita->MainProc(hwnd, message, wParam, lParam);
-    return _clayPigeonShooting->MainProc(hwnd, message, wParam, lParam);
+    //return _clayPigeonShooting->MainProc(hwnd, message, wParam, lParam);
+    //return _sliceGame->MainProc(hwnd, message, wParam, lParam);
+    //return _makeMiniMap->MainProc(hwnd, message, wParam, lParam);
+    //return _whirlwindBullet->MainProc(hwnd, message, wParam, lParam);
+    //return _blackHole->MainProc(hwnd, message, wParam, lParam);
+    return _earthwormGame->MainProc(hwnd, message, wParam, lParam);
 }
 
 void setWindowSize(int x, int y, int width, int height)

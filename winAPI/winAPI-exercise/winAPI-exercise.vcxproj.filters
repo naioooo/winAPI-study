@@ -26,17 +26,35 @@
     <Filter Include="API Framework\Image">
       <UniqueIdentifier>{67ae05e5-35d2-474e-9324-3605c594287f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="API Framework\Whack-a-Chikorita">
+    <Filter Include="API Framework\MainGame">
+      <UniqueIdentifier>{762ba78c-5c9d-4e1f-b82a-da48eb87f1a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\SliceGame">
+      <UniqueIdentifier>{8497d318-fbbb-47e9-ba7b-d111946717f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\Whack-a-Chikorita">
       <UniqueIdentifier>{5ca0b9a4-3cbd-42e0-b9ff-2b304d35d353}</UniqueIdentifier>
     </Filter>
-    <Filter Include="API Framework\Whack-a-Chikorita\Object">
+    <Filter Include="API Framework\MainGame\Whack-a-Chikorita\Object">
       <UniqueIdentifier>{1506c861-72c0-445d-9556-2d9d2793a7ea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="API Framework\Clay-pigeon shooting">
+    <Filter Include="API Framework\MainGame\Clay-pigeon shooting">
       <UniqueIdentifier>{6535cd98-43bb-452b-8146-fef3916073c1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="API Framework\Clay-pigeon shooting\Object">
+    <Filter Include="API Framework\MainGame\Clay-pigeon shooting\Object">
       <UniqueIdentifier>{d5cf4668-a648-40a0-9083-49d90fc598fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\MakeMiniMap">
+      <UniqueIdentifier>{d40b75c6-6a80-424b-a3da-bc11125a6c4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\WhirlwindBullet">
+      <UniqueIdentifier>{d21aed77-0a39-49c8-bb73-95bdaa1aa408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\BlackHole">
+      <UniqueIdentifier>{b19df17a-d657-46f4-b498-344d3fcb94d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\EarthwormGame">
+      <UniqueIdentifier>{9597f827-95df-4922-bc6b-7cbb457251f2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,31 +104,55 @@
       <Filter>API Framework\Utility</Filter>
     </ClCompile>
     <ClCompile Include="WhackAChikorita.cpp">
-      <Filter>API Framework\Whack-a-Chikorita</Filter>
+      <Filter>API Framework\MainGame\Whack-a-Chikorita</Filter>
     </ClCompile>
     <ClCompile Include="Chikorita.cpp">
-      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+      <Filter>API Framework\MainGame\Whack-a-Chikorita\Object</Filter>
     </ClCompile>
     <ClCompile Include="Cyndaquil.cpp">
-      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+      <Filter>API Framework\MainGame\Whack-a-Chikorita\Object</Filter>
     </ClCompile>
     <ClCompile Include="WinMain.cpp">
       <Filter>API Framework</Filter>
     </ClCompile>
     <ClCompile Include="ClayPigeonShooting.cpp">
-      <Filter>API Framework\Clay-pigeon shooting</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
     </ClCompile>
     <ClCompile Include="CPolygon.cpp">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
     </ClCompile>
     <ClCompile Include="CEllipse.cpp">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
     </ClCompile>
     <ClCompile Include="CRect.cpp">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SliceGame.cpp">
+      <Filter>API Framework\MainGame\SliceGame</Filter>
+    </ClCompile>
+    <ClCompile Include="MakeMiniMap.cpp">
+      <Filter>API Framework\MainGame\MakeMiniMap</Filter>
+    </ClCompile>
+    <ClCompile Include="WhirlwindBullet.cpp">
+      <Filter>API Framework\MainGame\WhirlwindBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>API Framework\MainGame\WhirlwindBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHole.cpp">
+      <Filter>API Framework\MainGame\BlackHole</Filter>
+    </ClCompile>
+    <ClCompile Include="Dust.cpp">
+      <Filter>API Framework\MainGame\BlackHole</Filter>
+    </ClCompile>
+    <ClCompile Include="EarthwormGame.cpp">
+      <Filter>API Framework\MainGame\EarthwormGame</Filter>
+    </ClCompile>
+    <ClCompile Include="WormBody.cpp">
+      <Filter>API Framework\MainGame\EarthwormGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -142,28 +184,52 @@
       <Filter>API Framework\Utility</Filter>
     </ClInclude>
     <ClInclude Include="WhackAChikorita.h">
-      <Filter>API Framework\Whack-a-Chikorita</Filter>
+      <Filter>API Framework\MainGame\Whack-a-Chikorita</Filter>
     </ClInclude>
     <ClInclude Include="Chikorita.h">
-      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+      <Filter>API Framework\MainGame\Whack-a-Chikorita\Object</Filter>
     </ClInclude>
     <ClInclude Include="Cyndaquil.h">
-      <Filter>API Framework\Whack-a-Chikorita\Object</Filter>
+      <Filter>API Framework\MainGame\Whack-a-Chikorita\Object</Filter>
     </ClInclude>
     <ClInclude Include="ClayPigeonShooting.h">
-      <Filter>API Framework\Clay-pigeon shooting</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
     </ClInclude>
     <ClInclude Include="CPolygon.h">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
     </ClInclude>
     <ClInclude Include="CEllipse.h">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
     </ClInclude>
     <ClInclude Include="CRect.h">
-      <Filter>API Framework\Clay-pigeon shooting\Object</Filter>
+      <Filter>API Framework\MainGame\Clay-pigeon shooting\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SliceGame.h">
+      <Filter>API Framework\MainGame\SliceGame</Filter>
+    </ClInclude>
+    <ClInclude Include="MakeMiniMap.h">
+      <Filter>API Framework\MainGame\MakeMiniMap</Filter>
+    </ClInclude>
+    <ClInclude Include="WhirlwindBullet.h">
+      <Filter>API Framework\MainGame\WhirlwindBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>API Framework\MainGame\WhirlwindBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackHole.h">
+      <Filter>API Framework\MainGame\BlackHole</Filter>
+    </ClInclude>
+    <ClInclude Include="Dust.h">
+      <Filter>API Framework\MainGame\BlackHole</Filter>
+    </ClInclude>
+    <ClInclude Include="EarthwormGame.h">
+      <Filter>API Framework\MainGame\EarthwormGame</Filter>
+    </ClInclude>
+    <ClInclude Include="WormBody.h">
+      <Filter>API Framework\MainGame\EarthwormGame</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
