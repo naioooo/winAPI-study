@@ -60,10 +60,11 @@ void Chikorita::render(HDC hdc)
 			m_rect.left, m_rect.top,                 // 시작점
 			40, 40, // 그릴 사이즈
 			m_image->getMemDC(),                         // 복사될 대상 메모리 DC
-			0, 0,                           // 복사 시작지점
+			0 , 0,                           // 복사 시작지점
 			40, 40,   // 복사 사이즈
 			COLOR_MAGENTA                            // 제외할 색상
 		);
+
 		break;
 	case Chikorita::Up:
 		GdiTransparentBlt

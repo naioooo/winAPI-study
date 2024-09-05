@@ -13,6 +13,7 @@ HRESULT BlackHole::init(void)
 	m_hole.pos = { WINSIZE_X / 2, WINSIZE_Y / 2 };
 	m_hole.radious = 100;
 
+
 	return S_OK;
 }
 
@@ -109,7 +110,6 @@ void BlackHole::generateDust()
 	{
 		int cnt = 0;
 		int max = RND->getFromIntTo(10, 20);
-
 		while (true)
 		{
 			if (cnt > max)

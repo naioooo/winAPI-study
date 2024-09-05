@@ -8,12 +8,18 @@ private:
 	GImage* _bgImage;
 	GImage* _plImage;
 
+	GImage* _nine;
+
 	RECT _rc;
 
 	int _countA, _countB;
 	int _alphaA, _alphaB;
 
 	bool _isAlphaIncrease;
+
+	int _count;
+	int _index;
+	int _isLeft;
 
 public:
 	HRESULT init(void);

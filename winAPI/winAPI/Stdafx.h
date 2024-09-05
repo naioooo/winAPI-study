@@ -25,6 +25,7 @@
 #include <random>
 #include <vector>
 #include <map>
+#include <queue>
 // 일반적인 상황에선 해시를 사용해 검색하기에 map보다 빠르다
 // 중복데이터를 허용하지 않기 때문이다
 // 유사데이터가 많다면 해시 충돌 발생 여부가 항상 존재한다
@@ -71,6 +72,19 @@ using namespace std;
 #define WINSIZE_X    800
 #define WINSIZE_Y    800
 #define WINSTYLE     WS_CAPTION | WS_SYSMENU
+
+// 색상 매크로 정의
+#define COLOR_RED       RGB(255, 0, 0)
+#define COLOR_GREEN     RGB(0, 255, 0)
+#define COLOR_BLUE      RGB(0, 0, 255)
+#define COLOR_YELLOW    RGB(255, 255, 0)
+#define COLOR_CYAN      RGB(0, 255, 255)
+#define COLOR_MAGENTA   RGB(255, 0, 144)
+#define COLOR_WHITE     RGB(255, 255, 255)
+#define COLOR_BLACK     RGB(0, 0, 0)
+#define COLOR_GRAY      RGB(128, 128, 128)
+#define COLOR_DARKGRAY  RGB(64, 64, 64)
+#define COLOR_LIGHTGRAY RGB(192, 192, 192)
 
 // 매크로 함수
 #define SAFE_DELETE(p)         {if(p) {delete (p); (p) = nullptr;}}

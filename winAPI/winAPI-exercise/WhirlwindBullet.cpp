@@ -8,7 +8,7 @@ HRESULT WhirlwindBullet::init(void)
 	m_bgImage->init("Resource/Images/Background/background.bmp", WINSIZE_X, WINSIZE_Y);
 
 	m_genCnt = 0;
-	m_genTime = 5;
+	m_genTime = 3.f;
 	m_shootAngle = 0;
 
 	return S_OK;
@@ -105,8 +105,10 @@ void WhirlwindBullet::generateBullet()
 
 		m_genCnt = 0;
 
-		m_shootAngle += 0.1f;
-		if (m_shootAngle >= 2 * 3.14592f) m_shootAngle = 0;
 	}
+
+	m_shootAngle += .3f;
+	if (m_shootAngle >= 2 * 3.14592f) m_shootAngle = 0;
+
 	m_genCnt++;
 }

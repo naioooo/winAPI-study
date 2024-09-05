@@ -56,6 +56,12 @@
     <Filter Include="API Framework\MainGame\EarthwormGame">
       <UniqueIdentifier>{9597f827-95df-4922-bc6b-7cbb457251f2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API Framework\MainGame\TankGame">
+      <UniqueIdentifier>{0e5c2198-cfd1-4ccd-b914-a6ab81a81b5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Framework\MainGame\KirizoAnimation">
+      <UniqueIdentifier>{eee57469-3cd5-4762-bd5c-178c0c3b3f56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C3DMatrix.cpp">
@@ -154,6 +160,15 @@
     <ClCompile Include="WormBody.cpp">
       <Filter>API Framework\MainGame\EarthwormGame</Filter>
     </ClCompile>
+    <ClCompile Include="TankGame.cpp">
+      <Filter>API Framework\MainGame\TankGame</Filter>
+    </ClCompile>
+    <ClCompile Include="KirizoAnimation.cpp">
+      <Filter>API Framework\MainGame\KirizoAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="Kirizo.cpp">
+      <Filter>API Framework\MainGame\KirizoAnimation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C3DMatrix.h">
@@ -230,6 +245,15 @@
     </ClInclude>
     <ClInclude Include="WormBody.h">
       <Filter>API Framework\MainGame\EarthwormGame</Filter>
+    </ClInclude>
+    <ClInclude Include="TankGame.h">
+      <Filter>API Framework\MainGame\TankGame</Filter>
+    </ClInclude>
+    <ClInclude Include="KirizoAnimation.h">
+      <Filter>API Framework\MainGame\KirizoAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Kirizo.h">
+      <Filter>API Framework\MainGame\KirizoAnimation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

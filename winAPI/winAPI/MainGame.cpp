@@ -20,6 +20,18 @@ HRESULT MainGame::init(void)
 
     _isAlphaIncrease = false;
 
+	_nine = new GImage;
+	_nine->init("Resource/Images/Background/background.bmp",
+		WINSIZE_X / 2 - 200, WINSIZE_Y / 2- 200,
+		3940, 586,
+		10, 2,
+		true, COLOR_MAGENTA
+	);
+
+	_count = 0;
+	_index = 0;
+	_isLeft = false;
+
 	return S_OK;
 }
 
@@ -28,6 +40,7 @@ void MainGame::release(void)
 	GameNode::release();
 	SAFE_DELETE(_bgImage);
 	SAFE_DELETE(_plImage);
+	SAFE_DELETE(_nine);
 	// 동적할당해제
 }
 
@@ -53,8 +66,9 @@ void MainGame::render(HDC hdc)
 	}
 
 	_plImage->render(memDC, _rc.left, _rc.top);
-
 	_plImage->alphaRender(memDC, _rc.left, _rc.top, _alphaA);
+
+	_nine->frameRender(memDC, _nine->getX(), _nine->getY());
 
 	this->getBackBuffer()->render(hdc, 0, 0);
 }
@@ -63,11 +77,17 @@ void MainGame::input()
 {
 	if (KEYMANAGER->isStayKeyDown(VK_LEFT))
 	{
+		_isLeft = true;
+		_nine->setX(_nine->getX() - 8.0f);
+
 		_rc.left -= 3;
 		_rc.right -= 3;
 	}
 	if (KEYMANAGER->isStayKeyDown(VK_RIGHT))
 	{
+		_isLeft = false;
+		_nine->setX(_nine->getX() + 8.0f);
+
 		_rc.left += 3;
 		_rc.right += 3;
 	}
@@ -88,12 +108,43 @@ void MainGame::input()
 		_alphaA++;
 		if (_alphaA >= 255) _alphaA = 0;
 	}
-
 	_countB++;
 	if (_countB % 3 == 0)
 	{
 		_alphaB += 5;
 		if (_alphaB >= 255) _alphaB = 0;
+	}
+
+
+	if (_isLeft)
+	{
+		_count++;
+		_nine->setFrameY(1);
+		if (_count % 3 == 0)
+		{
+			_index--;
+			if (_index < 0)
+			{
+				_index = 10;
+			}
+
+			_nine->setFrameX(_index);
+		}
+	}
+	else
+	{
+		_count++;
+		_nine->setFrameY(0);
+		if (_count % 3 == 0)
+		{
+			_index++;
+			if (_index > 10)
+			{
+				_index = 0;
+			}
+
+			_nine->setFrameX(_index);
+		}
 	}
 }
 
@@ -147,4 +198,22 @@ MainGame::~MainGame()
   해당하는 번호의 지렁이 구슬이 커진다
 
   얼마나 자연스러운지
+
+
+과제
+
+이미지 편집및 적용
+a. 탱크
+ 움직이는 애니메이션 구현
+ 움직이기 시작하고 움직임이 멈출때 자연스러움이 핵심
+
+b. 캐릭터 (키리조)
+ 시작 씬 + 게임 씬
+ 게임 씬 -> 아래의 이미지를 GUI화 시켜(혹은 버튼화) 재생시킨다 
+ 포함할 이미지 : 배경, 대기, 이동 (좌우), 찌르기 (좌우), 대각선 찌르기, 연속 찌르기, 원 돌리기, 승리 포즈(옷던지기), 스킬 클라이막스 연출
+
+
+
+
+
 */

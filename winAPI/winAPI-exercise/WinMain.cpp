@@ -7,6 +7,8 @@
 #include "WhirlwindBullet.h"
 #include "BlackHole.h"
 #include "EarthwormGame.h"
+#include "TankGame.h"
+#include "KirizoAnimation.h"
 
 
 // 전역 변수:
@@ -25,6 +27,8 @@ MakeMiniMap*        _makeMiniMap;
 WhirlwindBullet*    _whirlwindBullet;
 BlackHole*          _blackHole;
 EarthwormGame*      _earthwormGame;
+TankGame*           _tankGame;
+KirizoAnimation*    _kirizoAnimation;
  
 int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
@@ -38,6 +42,8 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _whirlwindBullet = new WhirlwindBullet();
     _blackHole = new BlackHole();
     _earthwormGame = new EarthwormGame();
+    _tankGame = new TankGame();
+    _kirizoAnimation = new KirizoAnimation();
 
     _hInstance = hInstance;
 
@@ -76,34 +82,15 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
         return false;
     }
 
-    if (FAILED(_whackAChikorita->init()))
-    {
-        return 0;
-    }
-    if (FAILED(_clayPigeonShooting->init()))
-    {
-        return 0;
-    }
-    if (FAILED(_sliceGame->init()))
-    {
-        return 0;
-    }
-    if (FAILED(_makeMiniMap->init()))
-    {
-        return 0;
-    }
-    if (FAILED(_whirlwindBullet->init()))
-    {
-        return 0;
-    }
-    if (FAILED(_blackHole->init()))
-    {
-        return 0;
-    }
-    if (FAILED(_earthwormGame->init()))
-    {
-        return 0;
-    }
+    if (FAILED(_whackAChikorita->init())) return 0;
+    if (FAILED(_clayPigeonShooting->init())) return 0;
+    if (FAILED(_sliceGame->init())) return 0;
+    if (FAILED(_makeMiniMap->init())) return 0;
+    if (FAILED(_whirlwindBullet->init())) return 0;
+    if (FAILED(_blackHole->init())) return 0;
+    if (FAILED(_earthwormGame->init())) return 0;
+    if (FAILED(_tankGame->init())) return 0;
+    if (FAILED(_kirizoAnimation->init())) return 0;
 
     //setWindowSize(WINSTART_X, WINSTART_Y, WINSIZE_X, WINSIZE_Y);
 
@@ -124,6 +111,9 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _whirlwindBullet->release();
     _blackHole->release();
     _earthwormGame->release();
+    _tankGame->release();
+    _kirizoAnimation->release();
+
     UnregisterClass(WINNAME, hInstance);
     return (int)message.wParam;
 }
@@ -136,7 +126,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
     //return _makeMiniMap->MainProc(hwnd, message, wParam, lParam);
     //return _whirlwindBullet->MainProc(hwnd, message, wParam, lParam);
     //return _blackHole->MainProc(hwnd, message, wParam, lParam);
-    return _earthwormGame->MainProc(hwnd, message, wParam, lParam);
+    //return _earthwormGame->MainProc(hwnd, message, wParam, lParam);
+    //return _tankGame->MainProc(hwnd, message, wParam, lParam);
+    return _kirizoAnimation->MainProc(hwnd, message, wParam, lParam);
 }
 
 void setWindowSize(int x, int y, int width, int height)
