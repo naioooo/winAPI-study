@@ -132,6 +132,7 @@
     <ClCompile Include="C3DMatrix.cpp" />
     <ClCompile Include="C3DVector.cpp" />
     <ClCompile Include="CEllipse.cpp" />
+    <ClCompile Include="CharacterWallClimbing.cpp" />
     <ClCompile Include="ClayPigeonShooting.cpp" />
     <ClCompile Include="CPolygon.cpp" />
     <ClCompile Include="CRect.cpp" />
@@ -156,6 +157,7 @@
     </ClCompile>
     <ClCompile Include="MakeMiniMap.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Simba.cpp" />
     <ClCompile Include="SliceGame.cpp" />
     <ClCompile Include="TankGame.cpp" />
     <ClCompile Include="WhackAChikorita.cpp">
@@ -204,6 +206,7 @@
     <ClInclude Include="C3DMatrix.h" />
     <ClInclude Include="C3DVector.h" />
     <ClInclude Include="CEllipse.h" />
+    <ClInclude Include="CharacterWallClimbing.h" />
     <ClInclude Include="ClayPigeonShooting.h" />
     <ClInclude Include="CommonMacroFunction.h" />
     <ClInclude Include="CPolygon.h" />
@@ -229,6 +232,7 @@
     </ClInclude>
     <ClInclude Include="MakeMiniMap.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Simba.h" />
     <ClInclude Include="SliceGame.h" />
     <ClInclude Include="TankGame.h" />
     <ClInclude Include="WhackAChikorita.h">

@@ -85,6 +85,7 @@ using namespace std;
 #define COLOR_GRAY      RGB(128, 128, 128)
 #define COLOR_DARKGRAY  RGB(64, 64, 64)
 #define COLOR_LIGHTGRAY RGB(192, 192, 192)
+#define COLOR_SKYBLUE   RGB(60, 188, 252)
 
 // 매크로 함수
 #define SAFE_DELETE(p)         {if(p) {delete (p); (p) = nullptr;}}

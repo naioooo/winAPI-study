@@ -40,8 +40,8 @@ public:
 	bool getIsLeft() { return m_isLeft; }
 	void setIsLeft(bool isLeft) { m_isLeft = isLeft; }
 
-	shared_ptr<GImage> makeHorizontallyFlippedImage(const char* fileName, float x, float y, int width, int height, int maxFrameX, int maxFrameY, bool isTrans, COLORREF transColor);
-	void saveHorizontallyFlippedImage(shared_ptr<GImage> to, shared_ptr<GImage> from);
+	shared_ptr<GImage> makeHorizontallyFlippedImage(const char* fileName, int width, int height, int maxFrameX, int maxFrameY, bool isTrans, COLORREF transColor);
+	void saveHorizontallyFlippedImage(shared_ptr<GImage>& to, shared_ptr<GImage>& from);
 
 	Kirizo();
 	Kirizo(POINT pos);

@@ -22,9 +22,9 @@ HRESULT KirizoAnimation::init(void)
       
    
     m_kirizoState = BoxButton(600, 10, width, height, "NONE", Kirizo::STATE_IDLE);
-    m_changeHorizontal = BoxButton(200, 10, width, height, "ChangeHorizontal", Kirizo::STATE_IDLE);
+    m_changeHorizontal = BoxButton(200, 10, width, height, "ÁÂ¿ì¹ÝÀü", Kirizo::STATE_IDLE);
 
-    POINT pos = { 600, 600 };
+    POINT pos = { 400, 400 };
     m_kirizo = make_shared<Kirizo>(pos);
     m_kirizo->init();
 
@@ -86,8 +86,6 @@ void KirizoAnimation::mouseInput(UINT message, LPARAM lParam)
                 m_kirizoState.text = boxButton.text;
             }
         }
-
-
 
         if (PtInRect(&m_changeHorizontal.rect, _ptMouse))
         {

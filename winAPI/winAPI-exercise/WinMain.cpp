@@ -9,6 +9,7 @@
 #include "EarthwormGame.h"
 #include "TankGame.h"
 #include "KirizoAnimation.h"
+#include "CharacterWallClimbing.h"
 
 
 // 전역 변수:
@@ -20,15 +21,16 @@ HINSTANCE _hInstance;
 HWND      _hWnd;
 POINT     _ptMouse;
 
-WhackAChikorita*    _whackAChikorita;
-ClayPigeonShooting* _clayPigeonShooting;
-SliceGame*          _sliceGame;
-MakeMiniMap*        _makeMiniMap;
-WhirlwindBullet*    _whirlwindBullet;
-BlackHole*          _blackHole;
-EarthwormGame*      _earthwormGame;
-TankGame*           _tankGame;
-KirizoAnimation*    _kirizoAnimation;
+WhackAChikorita*       _whackAChikorita;
+ClayPigeonShooting*    _clayPigeonShooting;
+SliceGame*             _sliceGame;
+MakeMiniMap*           _makeMiniMap;
+WhirlwindBullet*       _whirlwindBullet;
+BlackHole*             _blackHole;
+EarthwormGame*         _earthwormGame;
+TankGame*              _tankGame;
+KirizoAnimation*       _kirizoAnimation;
+CharacterWallClimbing* _characterWallClimbing;
  
 int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
@@ -44,6 +46,7 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _earthwormGame = new EarthwormGame();
     _tankGame = new TankGame();
     _kirizoAnimation = new KirizoAnimation();
+    _characterWallClimbing = new CharacterWallClimbing();
 
     _hInstance = hInstance;
 
@@ -91,6 +94,7 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     if (FAILED(_earthwormGame->init())) return 0;
     if (FAILED(_tankGame->init())) return 0;
     if (FAILED(_kirizoAnimation->init())) return 0;
+    if (FAILED(_characterWallClimbing->init())) return 0;
 
     //setWindowSize(WINSTART_X, WINSTART_Y, WINSIZE_X, WINSIZE_Y);
 
@@ -113,6 +117,7 @@ int APIENTRY WinMain(_In_     HINSTANCE hInstance,
     _earthwormGame->release();
     _tankGame->release();
     _kirizoAnimation->release();
+    _characterWallClimbing->release();
 
     UnregisterClass(WINNAME, hInstance);
     return (int)message.wParam;
@@ -128,7 +133,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
     //return _blackHole->MainProc(hwnd, message, wParam, lParam);
     //return _earthwormGame->MainProc(hwnd, message, wParam, lParam);
     //return _tankGame->MainProc(hwnd, message, wParam, lParam);
-    return _kirizoAnimation->MainProc(hwnd, message, wParam, lParam);
+    //return _kirizoAnimation->MainProc(hwnd, message, wParam, lParam);
+    return _characterWallClimbing->MainProc(hwnd, message, wParam, lParam);
 }
 
 void setWindowSize(int x, int y, int width, int height)
